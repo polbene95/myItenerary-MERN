@@ -1,0 +1,32 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-div > img {
+    height: 100%;
+
+}
+
+.login-form {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.login-form > .dropdown-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url("../Images/collapsed-menu.png");
+    background-size: cover;
+}

@@ -1,0 +1,64 @@
+.cities-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input-div {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    width: 95%;
+    border: 1px solid #00000061;
+    border-radius: 2px;
+}
+.cityList {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+}
+
+.cityList > div {
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cityList > div > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff5e
+}
+
+.cityList > div > div > div {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cityList > div > div > div > p {
+    margin: 0;
+    padding: 5px 15px;
+    background-color: #ffffff5e;
+    border-radius: 25px;
+}

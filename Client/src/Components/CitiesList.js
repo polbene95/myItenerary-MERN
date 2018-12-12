@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as  actionCreator  from '../Store/Actions/actions';
 
+import CityButton from './CityButton'
+
 import './CitiesList.css'
 
 
@@ -22,7 +24,7 @@ class CitiesList extends React.Component {
                 </div>
                 <div className="cityList">
                     {this.filterCities()
-                        .map(city => this.createCityNode({name: city.name, src: city.src}))}
+                        .map(city => <CityButton name={city.name} background={city.src.landscape}></CityButton>)}
                 </div>
             </div>
 
@@ -41,17 +43,13 @@ class CitiesList extends React.Component {
        this.props.fetchData();
     }
 
-    createCityNode(props) {
-        return (
-        <div style={{backgroundImage: 'url(' + props.src + ')'}}>
-            <div>
-                <div style={{backgroundImage: 'url(' + props.src + ')'}}>
-                    <p className="city-name">{props.name}</p>
-                </div>
-            </div>
-        </div>
-        )
-    }
+    // createCityNode(props) {
+    //     return (
+    //     <div style={{backgroundImage: 'url(' + props.src + ')'}}>
+    //         <p className="city-name">{props.name}</p>
+    //     </div>
+    //     )
+    // }
 }
 
 const mapStateToProps = (state) => {

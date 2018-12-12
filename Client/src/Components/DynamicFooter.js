@@ -44,15 +44,22 @@ class DynamicFooter extends React.Component {
     }
 
     render() {
+        if (this.state.cityTwo.src != null) {
         return (
-
             <div className="popular-container">
-                <CityButton background={this.state.cityOne.src} name={this.state.cityOne.name} />
-                <CityButton background={this.state.cityTwo.src} name={this.state.cityTwo.name} />
-                <CityButton background={this.state.cityThree.src} name={this.state.cityThree.name} />
-                <CityButton background={this.state.cityFour.src} name={this.state.cityFour.name} />
+                <CityButton background={this.state.cityOne.src.basic} name={this.state.cityOne.name} />
+                <CityButton background={this.state.cityTwo.src.basic} name={this.state.cityTwo.name} />
+                <CityButton background={this.state.cityThree.src.basic} name={this.state.cityThree.name} />
+                <CityButton background={this.state.cityFour.src.basic} name={this.state.cityFour.name} />
             </div>
         )
+        } else {
+            return (
+                <div className="popular-container">
+                    <p>Loading ...</p>
+                </div>
+            )
+        }
     }
 }
 

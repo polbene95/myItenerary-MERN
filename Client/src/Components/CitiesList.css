@@ -8,7 +8,7 @@
 }
 .input-div {
     width: 100%;
-    height: 20%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,17 +20,15 @@ input {
 }
 .cityList {
     width: 100%;
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
     overflow: scroll;
-    justify-content: center;
-    align-items: center;
 }
 
 .cityList > div {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 20%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -39,26 +37,11 @@ input {
     align-items: center;
 }
 
-.cityList > div > div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff5e
-}
-
-.cityList > div > div > div {
-    width: 180px;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cityList > div > div > div > p {
+.cityList > div >  p {
     margin: 0;
     padding: 5px 15px;
-    background-color: #ffffff5e;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 25px;
+    font-size: 1.4rem;
+    font-weight: bold;
 }

@@ -13,7 +13,7 @@ MongoClient.connect('mongodb://polbene:pol123@ds119374.mlab.com:19374/my_itinera
     var dbase = db.db("my_itinerary");
     if (err) return console.log(err)
     app.listen(8080, () => {
-      console.log('app working on 3000')
+      console.log('app working on 8080')
     })
 
     router.get('/city', (req, res) => {
@@ -21,6 +21,18 @@ MongoClient.connect('mongodb://polbene:pol123@ds119374.mlab.com:19374/my_itinera
           res.send(results)
         });
     });
+
+
+
+    router.get('/itinerary/:city', (req, res) => {
+      let city = req.params.city
+      dbase.collection('itinerary').find().toArray( (err, results) => {
+        console.log(results)
+        let array = results.filter(itinerary => itinerary.ref.includes(city))
+        res.send(array)
+          
+      });
+})
 
 app.use('/api',router)
 

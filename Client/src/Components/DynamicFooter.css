@@ -13,7 +13,7 @@
     background-size: cover;
     background-position: center;
 }
-.popular-container > .city > p{
+.popular-container > .city > a{
     width: fit-content;
     background: rgba(255, 255, 255, 0.7);
     color: black;

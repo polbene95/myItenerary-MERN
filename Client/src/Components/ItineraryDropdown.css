@@ -1,0 +1,213 @@
+.itinerary-div {
+    width: 98%;
+    min-height: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-bottom: 1%;
+}
+
+.top-div {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.bottom-div {
+    height: 20%;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.left-div {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.avatar-div {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.author-name-div {
+    text-align: center;
+}
+.avatar-div > img {
+width: 50px;
+    border-radius: 25px;
+
+}
+
+.right-div {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.right-div > div,
+.right-div > p
+ {
+    display: flex;
+    width: 90%;
+}
+
+.details {
+    display: flex;
+    justify-content: space-evenly;
+}
+.details > p {
+    width: 33%;
+}
+
+.fullDisplay {
+    min-height: 99%;
+    max-height: 99%;
+}
+
+.fullDisplay > .top-div {
+    width: 100%;
+    height: 20%;
+    display: flex;
+
+}
+.fullDisplay >.bottom-div {
+    border: none;
+    height: 80%;
+    width: 100%;
+}
+
+.itinerary-div > .bottom-div > .content {
+    display: none;
+
+}
+
+.fullDisplay > .bottom-div > .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.fullDisplay > .bottom-div > .content > .activities-div {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullDisplay > .bottom-div > .content > .activities-div > p {
+    width: 100%;
+    height: 20%;
+    padding-left: 1%;
+}
+
+.fullDisplay > .bottom-div > .content > .activities-div > .activities-slider {
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: inline-flex;
+    overflow-x: scroll;
+}
+.fullDisplay > .bottom-div > .content > .activities-div > .activities-slider > .activity {
+    width: 30%;
+    height: 90%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1%;
+}
+
+.fullDisplay > .bottom-div > .content > .activities-div > .activities-slider > .activity > p{
+    text-align: center;
+}
+
+.fullDisplay > .bottom-div > .content > .comments-div {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullDisplay > .bottom-div > .content > .comments-div > p {
+    width: 100%;
+    height: 10%;
+    padding-left: 1%;
+}
+
+.fullDisplay > .bottom-div > .content > .comments-div > .comments-input {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fullDisplay > .bottom-div > .content > .comments-div > .comments-input> input {
+    width: 80%;
+    height: 80%;
+}
+.fullDisplay > .bottom-div > .content > .comments-div > .comments-input> button {
+    width: 15%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.fullDisplay > .bottom-div > .content > .comments-div > .comments-posts {
+    width: 100%;
+    max-height: 80%;
+    min-height: 80%;
+    overflow: scroll;
+}
+
+.fullDisplay > .bottom-div > .content > .comments-div > .comments-posts > .comment-post {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fullDisplay > .bottom-div > .content > .comments-div > .comments-posts > .comment-post > .name {
+    width: 19%;
+    padding-left: 1%;
+}
+
+.fullDisplay > .bottom-div > .content > .comments-div > .comments-posts > .comment-post > .body {
+    width: 80%;
+    word-break: break-all;
+}
+
+
+.fullDisplay > .bottom-div > .content > .close-div {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+
+
+.itinerary-div > .bottom-div > .shown {
+    display: flex;
+}
+
+.itinerary-div > .bottom-div > .hidded {
+    display: none;
+}
+

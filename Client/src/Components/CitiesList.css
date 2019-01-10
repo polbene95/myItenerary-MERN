@@ -37,7 +37,7 @@ input {
     align-items: center;
 }
 
-.cityList > div >  p {
+.cityList > div >  a {
     margin: 0;
     padding: 5px 15px;
     background: rgba(255, 255, 255, 0.7);

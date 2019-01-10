@@ -6,3 +6,12 @@ body,
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
+
+p {
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

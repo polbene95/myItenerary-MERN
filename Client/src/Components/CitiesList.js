@@ -43,13 +43,6 @@ class CitiesList extends React.Component {
        this.props.fetchData();
     }
 
-    // createCityNode(props) {
-    //     return (
-    //     <div style={{backgroundImage: 'url(' + props.src + ')'}}>
-    //         <p className="city-name">{props.name}</p>
-    //     </div>
-    //     )
-    // }
 }
 
 const mapStateToProps = (state) => {

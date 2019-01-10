@@ -5,9 +5,13 @@ export default class CityButton extends React.Component {
     render () {
         return (
         <div className="city" style={{backgroundImage: 'url(' + this.props.background + ')'}}>
-            <p>{this.props.name}</p>
+            <a href={"/web/itinerary/"+ this.nameToLowerCase(this.props.name)}>{this.props.name}</a>
         </div>
         )
+    }
+
+    nameToLowerCase(name) {
+        return name.toLowerCase()
     }
 };
 

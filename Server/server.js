@@ -3,7 +3,6 @@ const MongoClient = require('mongodb').MongoClient
 const app = express();
 const bodyParser= require('body-parser');
 
-
 const router = express.Router();
 
 app.use(bodyParser.json());
@@ -22,19 +21,57 @@ MongoClient.connect('mongodb://polbene:pol123@ds119374.mlab.com:19374/my_itinera
         });
     });
 
-
+    router.get('/city/:city', (req, res) => {
+      let city = req.params.city
+      dbase.collection('city').find().toArray( (err, results) => {
+        let array = results.filter(el => el.id == city)
+        res.send(array)
+      });
+    })
 
     router.get('/itinerary/:city', (req, res) => {
-      let city = req.params.city
+      let city = req.params.city;
       dbase.collection('itinerary').find().toArray( (err, results) => {
-        console.log(results)
-        let array = results.filter(itinerary => itinerary.ref.includes(city))
+        let array = results.filter(itinerary => itinerary.ref && itinerary.ref.includes(city))
         res.send(array)
-          
       });
-})
+    })
 
-app.use('/api',router)
+    router.get('/itinerary/:city/:id', (req, res) => {
+      let city = req.params.city;
+      let id = req.params.id;
+      dbase.collection('itinerary').find().toArray( (err, results) => {
+        let array = results.filter(itinerary => itinerary.ref.includes(city) && itinerary["_id"] == id)
+        res.send(array)
+      });
+    });
+
+    router.get('/posts/:id', (req, res) => {
+      let id = req.params.id;
+      dbase.collection('posts').find().toArray((err, results) => {
+        let array = results.filter(post => post.itineraryId == id)
+        res.send(array)
+      })
+    });
+
+    router.post('/posts/:id', (req, res) => {
+      let id = req.params.id;
+      console.log(id)
+      console.log(req.body)
+      let post = {
+        "itineraryId": id,
+        "body": req.body.post,
+        "author": {}
+      }
+      dbase.collection('posts').save(post, (err, result) => {
+        if(err)
+        console.log(error)
+        res.send(result)
+      })
+    });
+   
+
+    app.use('/api',router)
 
 })
 

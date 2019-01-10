@@ -51,7 +51,7 @@ class LandingPage extends React.Component {
 const mapStateToProps = (state) => {
     return {
         cities: state.cities,
-        isLoading: state.isLoading
+        isLoading: state.citiesIsLoading
     }
 }
 
